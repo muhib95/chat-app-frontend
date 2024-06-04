@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./mainpart.css"
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { IconButton } from '@mui/material';
@@ -7,7 +7,9 @@ import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import SearchIcon from '@mui/icons-material/Search';
-const SideBar = () => {
+import ConversationItem from './ConversationItem';
+const SideBar = ({conversations}) => {
+
     return (
         <div className='sidebar'>
           <div className='sb-header'>
@@ -35,11 +37,18 @@ const SideBar = () => {
 
           </div>
           <div className='sb-search'>
-            <SearchIcon></SearchIcon>
+          <IconButton>
+          <SearchIcon/>
+            </IconButton>
+            
             <input type='text' placeholder='search' className='search-box'></input>
 
           </div>
           <div className='sb-conversation'>
+            {
+               conversations?.map((conversation,index)=> <ConversationItem conversation={conversation}></ConversationItem>)
+            }
+           
 
           </div>
         </div>
