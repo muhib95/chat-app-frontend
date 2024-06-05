@@ -25,7 +25,7 @@ const MainPart = () => {
         <div className='msgArea'>
           
         <SideBar conversations={conversations}></SideBar>
-        <WorkArea></WorkArea>
+        <WorkArea conversations={conversations}></WorkArea>
             
         
         </div>

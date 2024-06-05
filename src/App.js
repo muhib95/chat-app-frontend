@@ -1,5 +1,6 @@
 
 import './App.css';
+import Login from './component/MainPart/Login';
 import MainPart from './component/MainPart/MainPart';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
 
 <MainPart></MainPart>
+{/* <Login></Login> */}
     </div>
   );
 }
